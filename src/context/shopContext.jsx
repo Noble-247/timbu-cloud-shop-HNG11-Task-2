@@ -1,11 +1,13 @@
-import { createContext, useEffect, useState } from "react";
-import { PRODUCTS } from "../products";
+import { createContext, /* useEffect, */ useState } from "react";
+import { shopProducts } from "../products";
+import PropTypes from "prop-types";
 
 export const ShopContext = createContext(null);
 
+//Get the shop products from the shopProducts array
 const getDefaultCart = () => {
   let cart = {};
-  for (let i = 1; i < PRODUCTS.length + 1; i++) {
+  for (let i = 1; i < shopProducts.length + 1; i++) {
     cart[i] = 0;
   }
   return cart;
@@ -18,7 +20,9 @@ export const ShopContextProvider = (props) => {
     let totalAmount = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
+        let itemInfo = shopProducts.find(
+          (product) => product.id === Number(item)
+        );
         totalAmount += cartItems[item] * itemInfo.price;
       }
     }
@@ -55,4 +59,8 @@ export const ShopContextProvider = (props) => {
       {props.children}
     </ShopContext.Provider>
   );
+};
+
+ShopContextProvider.propTypes = {
+  children: PropTypes.any,
 };

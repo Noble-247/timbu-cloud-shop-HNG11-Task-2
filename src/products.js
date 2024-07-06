@@ -1,13 +1,13 @@
-import product1 from "./assets/products/1.png";
-import product2 from "./assets/products/2.png";
-import product3 from "./assets/products/3.png";
-import product4 from "./assets/products/4.png";
-import product5 from "./assets/products/5.png";
-import product6 from "./assets/products/6.webp";
-import product7 from "./assets/products/7.webp";
-import product8 from "./assets/products/8.webp";
+import product1 from "./assets/products/iphone.png";
+import product2 from "./assets/products/laptop.png";
+import product3 from "./assets/products/camera.png";
+import product4 from "./assets/products/long_sleeve.png";
+import product5 from "./assets/products/led_light.png";
+import product6 from "./assets/products/sweater.webp";
+import product7 from "./assets/products/short_sleeve.webp";
+import product8 from "./assets/products/facecap.webp";
 
-export const PRODUCTS = [
+export const shopProducts = [
   {
     id: 1,
     productName: "IPhone",
