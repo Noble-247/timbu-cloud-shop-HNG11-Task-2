@@ -1,7 +1,6 @@
 import { Navbar, Nav, Form, Button, Container, Image } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
-import { RxAvatar } from "react-icons/rx";
 import FavoriteIcon from "../assets/favorite-icon.png";
 import ShoppingBag from "../assets/shopping-bag.png";
 import Avatar from "../assets/avatar.png";
