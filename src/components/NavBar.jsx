@@ -25,7 +25,7 @@ export default function NavBar() {
         </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form className="d-flex ms-auto">
+          <Form className="d-flex ms-auto mt-4 mt-md-0">
             <Form.Control
               type="search"
               placeholder="Search"
