@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import { useContext } from "react";
 import { ShopContext } from "../../context/shopContext";
 import { Col } from "react-bootstrap";
+import { BiShoppingBag } from "react-icons/bi";
+import { BsHeart } from "react-icons/bs";
 
 function Product({ id, name, image, price }) {
   const { addToCart, cartItems } = useContext(ShopContext);
@@ -11,7 +13,7 @@ function Product({ id, name, image, price }) {
 
   return (
     <Col
-      className="bg-white"
+      className="bg-white position-relative"
       sm={12}
       md={4}
     >
@@ -24,8 +26,30 @@ function Product({ id, name, image, price }) {
         </p>
         <p>${price}</p>
       </div>
-      <button onClick={() => addToCart(id)}>
-        Add to Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}{" "}
+      <button
+        style={{
+          top: "20px",
+          right: "20px",
+          border: "none",
+          fontSize: "20px",
+        }}
+        className="position-absolute"
+      >
+        <BsHeart />
+      </button>
+      <button
+        style={{
+          bottom: "130px",
+          right: "20px",
+          border: "none",
+          fontSize: "20px",
+          /* border: "1px solid gray",
+          borderRadius: "50%", */
+        }}
+        className="position-absolute"
+        onClick={() => addToCart(id)}
+      >
+        <BiShoppingBag /> {cartItemAmount > 0 && <> ({cartItemAmount})</>}{" "}
       </button>
     </Col>
   );

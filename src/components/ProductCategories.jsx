@@ -11,7 +11,7 @@ function ProductCategories() {
         <Stack
           className="pb-4 ps-1 ps-sm-4"
           key={category.id}
-          gap={6}
+          gap={3}
         >
           <div className="py-3">{category.categoryName}</div>
         </Stack>
