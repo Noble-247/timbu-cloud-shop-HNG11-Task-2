@@ -1,9 +1,10 @@
+import PropTypes from "prop-types";
 import { Navbar, Nav, Form, Button, Container, Image } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import ShoppingBag from "../assets/shopping-bag.png";
 
-export default function NavBar() {
+export default function NavBar({ handleShow }) {
   const iconStyles = {
     width: "40px",
     marginInline: "10px",
@@ -16,7 +17,10 @@ export default function NavBar() {
       expand="lg"
       className="bg-primary navbar-dark"
     >
-      <Container>
+      <Container
+        fluid
+        className="px-5"
+      >
         <NavLink to="/">
           <Image
             width="100"
@@ -35,7 +39,11 @@ export default function NavBar() {
             <Button variant="outline-success">Search</Button>
           </Form>
           <Nav className="ms-auto my-2 my-lg-0">
-            <NavLink to="/cart">
+            <NavLink
+              onClick={() => {
+                handleShow();
+              }}
+            >
               <Image
                 style={iconStyles}
                 src={ShoppingBag}
@@ -48,6 +56,10 @@ export default function NavBar() {
     </Navbar>
   );
 }
+
+NavBar.propTypes = {
+  handleShow: PropTypes.func,
+};
 
 /*  <nav>
       <ul>

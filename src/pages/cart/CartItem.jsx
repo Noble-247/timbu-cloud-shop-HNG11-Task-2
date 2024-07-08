@@ -1,43 +1,63 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { ShopContext } from "../../context/shopContext";
+import { Col } from "react-bootstrap";
+import { BiTrash } from "react-icons/bi";
 
 function CartItem({ id, name, image, price }) {
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
 
   return (
-    <article
-      style={{
-        marginBottom: "15px",
-        backgroundColor: "teal",
-        width: "33%",
-        padding: "10px",
-      }}
+    <Col
+      lg="12"
+      className="bg-white position-relative"
     >
-      <img
-        style={{ display: "block" }}
-        width="250"
-        src={image}
-        alt={`Product ID: ${id}`}
-      />
-      <div>
-        <p>
-          <strong>{name}</strong>
-        </p>
-        <p>${price}</p>
-        <div>
-          <button onClick={() => removeFromCart(id)}>-</button>
-          <input
-            value={cartItems[id]}
-            onChange={(event) =>
-              updateCartItemCount(Number(event.target.value), id)
-            }
-          />
-          <button onClick={() => addToCart(id)}>+</button>
+      <section className="d-flex justify-content-between align-items-center gap-5">
+        <div className="w-25 h-75 bg-info d-flex align-items-center justify-content-center">
+          <img src={image} />
         </div>
-      </div>
-    </article>
+        <div className="w-75">
+          <p>
+            <strong>{name}</strong>
+          </p>
+          <p>${price}</p>
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <button
+                className="btn btn-outline-primary"
+                onClick={() => removeFromCart(id)}
+              >
+                -
+              </button>
+
+              <input
+                type="text"
+                style={{ width: "35px", padding: "4px", textAlign: "center" }}
+                value={cartItems[id]}
+                onChange={(event) =>
+                  updateCartItemCount(Number(event.target.value), id)
+                }
+              />
+              <button
+                className="btn btn-outline-primary"
+                onClick={() => addToCart(id)}
+              >
+                +
+              </button>
+            </div>
+            <div style={{ paddingRight: "60px" }}>
+              <button
+                className="btn"
+                style={{ fontSize: "25px" }}
+              >
+                <BiTrash />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Col>
   );
 }
 
