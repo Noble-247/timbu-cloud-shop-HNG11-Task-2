@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { ShopContext } from "../../context/shopContext";
+import { Col } from "react-bootstrap";
 
 function Product({ id, name, image, price }) {
   const { addToCart, cartItems } = useContext(ShopContext);
@@ -9,19 +10,10 @@ function Product({ id, name, image, price }) {
   const cartItemAmount = cartItems[id];
 
   return (
-    <article
-      style={{
-        marginBottom: "15px",
-        backgroundColor: "teal",
-        width: "33%",
-        padding: "10px",
-      }}
-    >
+    <Col>
       <img
-        style={{ display: "block" }}
         width="250"
         src={image}
-        alt={`Product ID: ${id}`}
       />
       <div>
         <p>
@@ -32,7 +24,7 @@ function Product({ id, name, image, price }) {
       <button onClick={() => addToCart(id)}>
         Add to Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}{" "}
       </button>
-    </article>
+    </Col>
   );
 }
 

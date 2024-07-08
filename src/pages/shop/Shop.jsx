@@ -1,24 +1,26 @@
-import { shopProducts } from "../../products";
-import Product from "./Product";
+import { Container, Col, Row } from "react-bootstrap";
+import ProductCategories from "../../components/ProductCategories";
+import ProductCategory from "../../components/ProductCategory";
 
 function Shop() {
   return (
-    <section>
-      <div>
-        <h1>TIMBU CLOUD SHOP</h1>
-      </div>
-      <div>
-        {shopProducts.map((product) => (
-          <Product
-            id={product.id}
-            name={product.productName}
-            image={product.productImage}
-            price={product.price}
-            key={product.id}
-          />
-        ))}
-      </div>
-    </section>
+    <Container fluid>
+      <Row>
+        <Col
+          className="p-0 m-0"
+          xs={12}
+          md={2}
+        >
+          <ProductCategories />
+        </Col>
+        <Col
+          xs={6}
+          md={10}
+        >
+          <ProductCategory />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
