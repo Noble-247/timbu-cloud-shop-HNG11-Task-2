@@ -1,16 +1,17 @@
 import { Navbar, Nav, Form, Button, Container, Image } from "react-bootstrap";
-import { BiShoppingBag } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
-import { BsHeart } from "react-icons/bs";
 import { RxAvatar } from "react-icons/rx";
+import FavoriteIcon from "../assets/favorite-icon.png";
+import ShoppingBag from "../assets/shopping-bag.png";
+import Avatar from "../assets/avatar.png";
 
 export default function NavBar() {
   const iconStyles = {
-    fontSize: "20px",
-    border: "1px solid white",
-    borderRadius: "50%",
-    padding: "5px 10px",
+    width: "40px",
+    marginInline: "10px",
+    marginTop: "5px",
+    marginBottom: "5px",
   };
 
   return (
@@ -45,35 +46,25 @@ export default function NavBar() {
               className="border-1 border-white rounded"
               to="#"
             >
-              <div
-                className="mx-3"
+              <Image
                 style={iconStyles}
-              >
-                <BsHeart />
-              </div>
+                src={FavoriteIcon}
+                rounded
+              />
             </NavLink>
             <NavLink to="/cart">
-              <div
-                className="mx-3"
+              <Image
                 style={iconStyles}
-              >
-                <BiShoppingBag />
-              </div>
+                src={ShoppingBag}
+                rounded
+              />
             </NavLink>
             <NavLink href="#">
-              <div
-                className="mx-3"
+              <Image
                 style={iconStyles}
-              >
-                <RxAvatar />
-              </div>
-              {/* <img
-                width="30"
                 src={Avatar}
-                className="img-fluid rounded"
-                s
-                alt="profile-pic"
-              /> */}
+                rounded
+              />
             </NavLink>
           </Nav>
         </Navbar.Collapse>
