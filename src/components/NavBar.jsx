@@ -1,9 +1,8 @@
 import { Navbar, Nav, Form, Button, Container, Image } from "react-bootstrap";
-import { BiCart, BiShoppingBag } from "react-icons/bi";
+import { BiShoppingBag } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import { BsHeart } from "react-icons/bs";
-import Avatar from "../assets/avatar.png";
 import { RxAvatar } from "react-icons/rx";
 
 export default function NavBar() {
