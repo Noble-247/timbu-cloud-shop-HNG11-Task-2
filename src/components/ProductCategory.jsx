@@ -1,14 +1,14 @@
 import { shopProducts } from "../products";
 import Product from "../pages/shop/Product";
-import { Container, Row } from "react-bootstrap";
+import { Button, Container, Row } from "react-bootstrap";
 function ProductCategory() {
   return (
     <section>
-      <div>
-        <h1>TIMBU CLOUD SHOP</h1>
-      </div>
-      <Container>
-        <Row>
+      <Container className="mt-5">
+        <div>
+          <h2>Sunscreens</h2>
+        </div>
+        <Row className="g-3">
           {shopProducts.map((product) => (
             <Product
               id={product.id}
@@ -19,6 +19,12 @@ function ProductCategory() {
             />
           ))}
         </Row>
+        <div
+          style={{ marginTop: "170px" }}
+          className="d-flex align-items-center justify-content-center mb-5"
+        >
+          <Button className="btn btn-success">1</Button>
+        </div>
       </Container>
     </section>
   );

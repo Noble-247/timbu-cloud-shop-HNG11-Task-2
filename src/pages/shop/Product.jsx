@@ -10,11 +10,14 @@ function Product({ id, name, image, price }) {
   const cartItemAmount = cartItems[id];
 
   return (
-    <Col>
-      <img
-        width="250"
-        src={image}
-      />
+    <Col
+      className="bg-white"
+      sm={12}
+      md={4}
+    >
+      <div className="w-100 h-75 bg-info d-flex align-items-center justify-content-center">
+        <img src={image} />
+      </div>
       <div>
         <p>
           <strong>{name}</strong>

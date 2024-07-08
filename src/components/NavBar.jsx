@@ -1,9 +1,7 @@
 import { Navbar, Nav, Form, Button, Container, Image } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
-import FavoriteIcon from "../assets/favorite-icon.png";
 import ShoppingBag from "../assets/shopping-bag.png";
-import Avatar from "../assets/avatar.png";
 
 export default function NavBar() {
   const iconStyles = {
@@ -36,32 +34,11 @@ export default function NavBar() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <Nav
-            className="ms-auto my-2 my-lg-0"
-            /*  style={{ maxHeight: "100px" }}
-            navbarScroll */
-          >
-            <NavLink
-              className="border-1 border-white rounded"
-              to="#"
-            >
-              <Image
-                style={iconStyles}
-                src={FavoriteIcon}
-                rounded
-              />
-            </NavLink>
+          <Nav className="ms-auto my-2 my-lg-0">
             <NavLink to="/cart">
               <Image
                 style={iconStyles}
                 src={ShoppingBag}
-                rounded
-              />
-            </NavLink>
-            <NavLink href="#">
-              <Image
-                style={iconStyles}
-                src={Avatar}
                 rounded
               />
             </NavLink>

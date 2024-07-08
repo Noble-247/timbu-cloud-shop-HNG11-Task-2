@@ -8,14 +8,14 @@ function Shop() {
       <Row>
         <Col
           className="p-0 m-0"
-          xs={12}
-          md={2}
+          sm={12}
+          md={3}
         >
           <ProductCategories />
         </Col>
         <Col
-          xs={6}
-          md={10}
+          sm={12}
+          md={9}
         >
           <ProductCategory />
         </Col>
