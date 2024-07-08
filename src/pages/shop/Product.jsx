@@ -5,7 +5,7 @@ import { Col } from "react-bootstrap";
 import { BiShoppingBag } from "react-icons/bi";
 import { BsHeart } from "react-icons/bs";
 
-function Product({ id, name, image, price }) {
+function Product({ id, name, image, price, stockInfo }) {
   const { addToCart, cartItems } = useContext(ShopContext);
 
   // Get the amount of the specific item added to the cart
@@ -24,6 +24,7 @@ function Product({ id, name, image, price }) {
         <p>
           <strong>{name}</strong>
         </p>
+        <p className="text-link-light">{stockInfo}</p>
         <p>${price}</p>
       </div>
       <button
@@ -62,4 +63,5 @@ Product.propTypes = {
   name: PropTypes.string,
   image: PropTypes.any,
   price: PropTypes.price,
+  stockInfo: PropTypes.string,
 };

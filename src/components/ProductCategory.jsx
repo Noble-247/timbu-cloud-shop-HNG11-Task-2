@@ -15,6 +15,7 @@ function ProductCategory() {
               name={product.productName}
               image={product.productImage}
               price={product.price}
+              stockInfo={product.stockInfo}
               key={product.id}
             />
           ))}
