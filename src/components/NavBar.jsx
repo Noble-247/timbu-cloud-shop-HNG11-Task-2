@@ -29,11 +29,14 @@ export default function NavBar({ handleShow }) {
         </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form className="d-flex ms-auto mt-4 mt-md-0">
+          <Form
+            className="d-flex mt-4 mt-md-0 ms-sm-5 ps-sm-5"
+            /* style={{ marginLeft: "170px" }} */
+          >
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2"
+              className="me-2 ms-sm-2"
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>

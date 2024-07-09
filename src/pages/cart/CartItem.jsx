@@ -67,5 +67,5 @@ CartItem.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
   image: PropTypes.any,
-  price: PropTypes.price,
+  price: PropTypes.func,
 };

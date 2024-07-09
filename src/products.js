@@ -66,7 +66,7 @@ export const shopProducts = [
     stockInfo: "13,000 sold",
   },
   {
-    id: 8,
+    id: 9,
     productName: "Dr. Jart+ Mineral Sunscreen SPF 50+T",
     productImage: product9,
     price: 75,

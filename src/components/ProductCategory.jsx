@@ -4,8 +4,8 @@ import { Button, Container, Row } from "react-bootstrap";
 function ProductCategory() {
   return (
     <section>
-      <Container className="mt-5">
-        <div>
+      <Container className="my-5">
+        <div className="my-5">
           <h2>Sunscreens</h2>
         </div>
         <Row className="g-3">

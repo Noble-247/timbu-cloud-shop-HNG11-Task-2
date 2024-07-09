@@ -5,11 +5,12 @@ import Shop from "./pages/shop/Shop";
 import Cart from "./pages/cart/Cart";
 import { ShopContextProvider } from "./context/shopContext";
 import { Modal } from "react-bootstrap";
+import Checkout from "./pages/checkout/Checkout";
 
 function App() {
   const [show, setShow] = useState(false);
 
-  /*   const handleClose = () => setShow(false); */
+  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
@@ -26,7 +27,13 @@ function App() {
               path="/cart"
               element={<Cart />}
             />
+            <Route
+              path="/checkout"
+              element={<Checkout />}
+            />
           </Routes>
+
+          {/* CHECKOUT MODAL DIALOG */}
           <Modal
             show={show}
             onHide={() => setShow(false)}
@@ -39,7 +46,7 @@ function App() {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Cart />
+              <Cart handleClose={handleClose} />
             </Modal.Body>
           </Modal>
         </Router>

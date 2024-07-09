@@ -20,12 +20,14 @@ function Product({ id, name, image, price, stockInfo }) {
       <div className="w-100 h-75 bg-info d-flex align-items-center justify-content-center">
         <img src={image} />
       </div>
-      <div>
-        <p>
+      <div style={{ lineHeight: "1" }}>
+        <p className="mt-2">
           <strong>{name}</strong>
         </p>
-        <p className="text-link-light">{stockInfo}</p>
-        <p>${price}</p>
+        <p className="text-dark">{stockInfo}</p>
+        <p>
+          <strong>${price}</strong>
+        </p>
       </div>
       <button
         style={{
@@ -62,6 +64,6 @@ Product.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
   image: PropTypes.any,
-  price: PropTypes.price,
+  price: PropTypes.func,
   stockInfo: PropTypes.string,
 };
