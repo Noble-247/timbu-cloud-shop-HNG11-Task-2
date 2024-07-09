@@ -1,6 +1,7 @@
 import { Button, Col, Form, Row } from "react-bootstrap";
+import PropTypes from "prop-types";
 
-function OrderForm() {
+function OrderForm({ setShow }) {
   return (
     <Col
       className="mt-5 border border-1 border-primary mb-5 p-4"
@@ -89,9 +90,21 @@ function OrderForm() {
             label="Save my card details"
           />
         </Form.Group>
-        <Button className="w-100">Checkout</Button>
+        <Button
+          onClick={() => {
+            setShow(true);
+          }}
+          className="w-100"
+        >
+          Checkout
+        </Button>
 
-        <Button className="w-100 btn-outline-primary bg-white my-3">
+        <Button
+          onClick={() => {
+            setShow(true);
+          }}
+          className="w-100 btn-outline-primary bg-white my-3"
+        >
           Checkout with transfer
         </Button>
       </Form>
@@ -100,3 +113,7 @@ function OrderForm() {
 }
 
 export default OrderForm;
+
+OrderForm.propTypes = {
+  setShow: PropTypes.func,
+};

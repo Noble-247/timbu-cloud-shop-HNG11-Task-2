@@ -33,7 +33,7 @@ function App() {
             />
           </Routes>
 
-          {/* CHECKOUT MODAL DIALOG */}
+          {/* CART MODAL DIALOG */}
           <Modal
             show={show}
             onHide={() => setShow(false)}
