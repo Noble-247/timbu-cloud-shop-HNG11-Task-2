@@ -1,6 +1,6 @@
 import { shopProducts } from "../products";
 import Product from "../pages/shop/Product";
-import { Button, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 function ProductCategory() {
   return (
     <section>
@@ -23,9 +23,7 @@ function ProductCategory() {
         <div
           style={{ marginTop: "170px" }}
           className="d-flex align-items-center justify-content-center mb-5"
-        >
-          <Button className="btn btn-success">1</Button>
-        </div>
+        ></div>
       </Container>
     </section>
   );

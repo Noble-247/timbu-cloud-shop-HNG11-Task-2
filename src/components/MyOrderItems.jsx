@@ -16,7 +16,7 @@ function OrderItems({ id, name, image }) {
         <div className="w-50 bg-info d-flex align-items-center justify-content-center">
           <img
             src={image}
-            width="150"
+            width="100"
           />
         </div>
         <div className="w-75">
