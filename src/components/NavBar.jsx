@@ -1,5 +1,13 @@
 import PropTypes from "prop-types";
-import { Navbar, Nav, Form, Button, Container, Image } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  Form,
+  FloatingLabel,
+  /* Button, */
+  Container,
+  Image,
+} from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import ShoppingBag from "../assets/shopping-bag.png";
@@ -29,17 +37,26 @@ export default function NavBar({ handleShow }) {
         </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form
-            className="d-flex mt-4 mt-md-0 ms-sm-5 ps-sm-5"
-            /* style={{ marginLeft: "170px" }} */
-          >
-            <Form.Control
+          <Form className="d-flex mt-4 mt-md-0 ms-sm-5 ps-sm-5">
+            <FloatingLabel
+              controlId="floatingInput"
+              label="Search"
+              className="text-white w-100"
+            >
+              <Form.Control
+                style={{ borderRadius: "20px" }}
+                type="search"
+                placeholder="name@example.com"
+                className="bg-transparent text-white "
+              />
+            </FloatingLabel>
+            {/* <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2 ms-sm-2"
+              className="me-2 ms-sm-2 bg-transparent rounded-5"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success">Search</Button> */}
           </Form>
           <Nav className="ms-auto my-2 my-lg-0">
             <NavLink
