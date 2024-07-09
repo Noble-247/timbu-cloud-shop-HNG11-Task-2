@@ -69,7 +69,7 @@ function Checkout({ handleShow }) {
               className="btn btn-primary mt-4"
               type="submit"
             >
-              Continue Shopping
+              <Link to="/"> Continue Shopping</Link>
             </button>
           </div>
         </Modal.Body>
