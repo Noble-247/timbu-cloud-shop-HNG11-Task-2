@@ -7,9 +7,12 @@ function ProductCategories() {
       fluid
       className="bg-primary text-white m-0"
     >
+      <div className="ps-4 pt-4 pb-3 pt-sm-5">
+        <h5 className="pt-sm-3">Category</h5>
+      </div>
       {productCategories.map((category) => (
         <Stack
-          className="pb-4 ps-4 ps-sm-4"
+          className="pb-4 ps-4 ps-sm-4 pt-sm-3"
           key={category.id}
           gap={3}
         >
