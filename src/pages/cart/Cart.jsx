@@ -53,7 +53,13 @@ function Cart({ handleClose }) {
               className="btn btn-primary d-block w-100 mb-5 py-3"
               onClick={() => handleClose()}
             >
-              <Link to="/checkout"> Continue To Checkout</Link>
+              <Link
+                to="/checkout"
+                className="text-decoration-none"
+              >
+                {" "}
+                Continue To Checkout
+              </Link>
             </button>
           </div>
         )}

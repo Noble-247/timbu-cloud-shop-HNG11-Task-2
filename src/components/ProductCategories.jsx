@@ -1,5 +1,6 @@
 import { Container, Stack } from "react-bootstrap";
 import { productCategories } from "../products";
+import { Link } from "react-router-dom";
 
 function ProductCategories() {
   return (
@@ -16,7 +17,11 @@ function ProductCategories() {
           key={category.id}
           gap={3}
         >
-          <div className="py-2">{category.categoryName}</div>
+          <div className="py-2">
+            <Link className="text-decoration-none">
+              {category.categoryName}
+            </Link>
+          </div>
         </Stack>
       ))}
     </Container>
