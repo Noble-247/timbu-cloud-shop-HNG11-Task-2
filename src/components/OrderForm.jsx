@@ -1,5 +1,6 @@
 import { Button, Col, Form, Row } from "react-bootstrap";
 import PropTypes from "prop-types";
+import Image from "../assets/creditcard.png";
 
 function OrderForm({ setShow }) {
   return (
@@ -50,7 +51,7 @@ function OrderForm({ setShow }) {
           </p>
         </div>
         <Form.Group
-          className="mb-3"
+          className="mb-3 position-relative"
           controlId="formGroupEmail"
         >
           <Form.Label>Card Information</Form.Label>
@@ -58,6 +59,16 @@ function OrderForm({ setShow }) {
             type="text"
             placeholder="1234-1234-1234-1234"
           />
+          <div
+            className="w-50 position-absolute"
+            style={{ top: "37px", left: "300px" }}
+          >
+            <img
+              src={Image}
+              alt="credit card type"
+              className="w-50"
+            />
+          </div>
         </Form.Group>
         <Row className="mb-3">
           <Form.Group
