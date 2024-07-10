@@ -37,7 +37,7 @@ export default function NavBar({ handleShow }) {
         </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form className="d-flex mt-4 mt-md-0 ms-sm-5 ps-sm-5">
+          <Form className="d-flex mt-4 mt-lg-0 ms-lg-5 ps-lg-5">
             <FloatingLabel
               controlId="floatingInput"
               label="Search"
@@ -47,7 +47,7 @@ export default function NavBar({ handleShow }) {
                 style={{ borderRadius: "20px" }}
                 type="search"
                 placeholder="name@example.com"
-                className="bg-transparent text-white "
+                className="bg-transparent text-white ms-0"
               />
             </FloatingLabel>
             {/* <Form.Control
