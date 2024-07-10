@@ -61,7 +61,7 @@ function OrderForm({ setShow }) {
           />
           <div
             className="w-50 position-absolute"
-            style={{ top: "37px", left: "300px" }}
+            style={{ top: "37px", left: "72%" }}
           >
             <img
               src={Image}
