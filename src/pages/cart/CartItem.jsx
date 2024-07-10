@@ -25,6 +25,7 @@ function CartItem({ id, name, image, price }) {
           <div className="d-flex justify-content-between align-items-center">
             <div>
               <button
+                style={{ padding: "4px", width: "35px", borderRadius: "0px" }}
                 className="btn btn-outline-primary"
                 onClick={() => removeFromCart(id)}
               >
@@ -33,13 +34,19 @@ function CartItem({ id, name, image, price }) {
 
               <input
                 type="text"
-                style={{ width: "35px", padding: "4px", textAlign: "center" }}
+                style={{
+                  width: "35px",
+                  padding: "4px",
+                  textAlign: "center",
+                  borderRadius: "0px",
+                }}
                 value={cartItems[id]}
                 onChange={(event) =>
                   updateCartItemCount(Number(event.target.value), id)
                 }
               />
               <button
+                style={{ padding: "4px", width: "35px", borderRadius: "0px" }}
                 className="btn btn-outline-primary"
                 onClick={() => addToCart(id)}
               >
