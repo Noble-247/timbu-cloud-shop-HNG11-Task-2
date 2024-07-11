@@ -11,7 +11,7 @@ function Checkout({ handleShow }) {
 
   return (
     <Container>
-      <div className="mt-5 w-50 mx-auto">
+      <div className="mt-5 w-100 text-center">
         <Link
           to="/"
           className="btn text-primary fw-bold"
