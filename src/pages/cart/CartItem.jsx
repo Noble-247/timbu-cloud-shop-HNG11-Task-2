@@ -64,7 +64,7 @@ function CartItem({ id, name, image, price }) {
                 </Button>
               </ButtonGroup>
             </div>
-            <div style={{ paddingRight: "60px" }}>
+            <div>
               <button
                 className="btn"
                 style={{ fontSize: "25px" }}
