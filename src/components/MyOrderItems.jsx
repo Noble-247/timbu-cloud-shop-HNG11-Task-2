@@ -13,10 +13,11 @@ function OrderItems({ id, name, image }) {
     >
       <hr />
       <section className="d-flex justify-content-between align-items-center gap-5">
-        <div className="w-50 bg-info d-flex align-items-center justify-content-center">
+        <div className="w-100">
           <img
             src={image}
-            width="100"
+            className="img-fluid"
+            style={{ borderRadius: "20px" }}
           />
         </div>
         <div className="w-75">
