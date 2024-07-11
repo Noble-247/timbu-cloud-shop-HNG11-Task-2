@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import ShoppingBag from "../assets/shopping-bag.png";
 import { FaSearch } from "react-icons/fa";
+import "../assets/styles/Navbar.css";
 
 export default function NavBar({ handleShow }) {
   const iconStyles = {
@@ -43,7 +44,7 @@ export default function NavBar({ handleShow }) {
             <FloatingLabel
               controlId="floatingInput"
               label={inputPlaceholder.map((placeholder) => placeholder)}
-              className="text-white p-0 m-0 w-100"
+              className="text-white p-0 m-0 w-75 responsive-label"
               style={{ fontSize: "20px" }}
             >
               <Form.Control
@@ -52,7 +53,7 @@ export default function NavBar({ handleShow }) {
                 }}
                 type="search"
                 placeholder="search"
-                className="bg-transparent text-white ms-0"
+                className="bg-transparent text-white ms-0 p-0"
               />
             </FloatingLabel>
           </Form>
