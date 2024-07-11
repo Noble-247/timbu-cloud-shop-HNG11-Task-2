@@ -14,8 +14,11 @@ function CartItem({ id, name, image, price }) {
       className="bg-white position-relative"
     >
       <section className="d-flex justify-content-between align-items-center gap-5">
-        <div className="w-25 h-75 bg-info d-flex align-items-center justify-content-center">
-          <img src={image} />
+        <div className="w-100">
+          <img
+            src={image}
+            className="img-fluid"
+          />
         </div>
         <div className="w-75">
           <p>

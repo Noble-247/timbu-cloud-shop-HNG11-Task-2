@@ -17,8 +17,11 @@ function Product({ id, name, image, price, stockInfo }) {
       sm={12}
       md={4}
     >
-      <div className="w-100 h-75 bg-info d-flex align-items-center justify-content-center">
-        <img src={image} />
+      <div className="w-100">
+        <img
+          src={image}
+          className="img-fluid"
+        />
       </div>
       <div style={{ lineHeight: "1" }}>
         <p className="mt-2">
