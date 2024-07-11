@@ -9,13 +9,13 @@ function Shop() {
         <Col
           className="p-0 m-0"
           sm={12}
-          md={2}
+          md={3}
         >
           <ProductCategories />
         </Col>
         <Col
           sm={12}
-          md={10}
+          md={9}
         >
           <ProductCategory />
         </Col>
