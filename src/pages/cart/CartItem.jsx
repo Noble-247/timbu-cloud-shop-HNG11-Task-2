@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { ShopContext } from "../../context/shopContext";
-import { Col } from "react-bootstrap";
+import { Col, ButtonGroup, Button } from "react-bootstrap";
 import { BiTrash } from "react-icons/bi";
 
 function CartItem({ id, name, image, price }) {
@@ -24,34 +24,42 @@ function CartItem({ id, name, image, price }) {
           <p>${price}</p>
           <div className="d-flex justify-content-between align-items-center">
             <div>
-              <button
-                style={{ padding: "4px", width: "35px", borderRadius: "0px" }}
-                className="btn btn-outline-primary"
-                onClick={() => removeFromCart(id)}
-              >
-                -
-              </button>
-
-              <input
-                type="text"
-                style={{
-                  width: "35px",
-                  padding: "4px",
-                  textAlign: "center",
-                  borderRadius: "0px",
-                }}
-                value={cartItems[id]}
-                onChange={(event) =>
-                  updateCartItemCount(Number(event.target.value), id)
-                }
-              />
-              <button
-                style={{ padding: "4px", width: "35px", borderRadius: "0px" }}
-                className="btn btn-outline-primary"
-                onClick={() => addToCart(id)}
-              >
-                +
-              </button>
+              <ButtonGroup aria-label="Basic example">
+                <Button
+                  style={{ width: "35px" }}
+                  className="border border-1 border-primary"
+                  variant="white"
+                  onClick={() => removeFromCart(id)}
+                >
+                  -
+                </Button>
+                <Button
+                  className="border border-1 border-primary"
+                  variant="white"
+                  onClick={() => removeFromCart(id)}
+                >
+                  <input
+                    type="text"
+                    style={{
+                      width: "12px",
+                      textAlign: "center",
+                      border: "0px",
+                    }}
+                    value={cartItems[id]}
+                    onChange={(event) =>
+                      updateCartItemCount(Number(event.target.value), id)
+                    }
+                  />
+                </Button>
+                <Button
+                  style={{ width: "35px" }}
+                  className="border border-1 border-primary"
+                  variant="white"
+                  onClick={() => addToCart(id)}
+                >
+                  +
+                </Button>
+              </ButtonGroup>
             </div>
             <div style={{ paddingRight: "60px" }}>
               <button
