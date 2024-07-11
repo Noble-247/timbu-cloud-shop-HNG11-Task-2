@@ -40,23 +40,25 @@ export default function NavBar({ handleShow }) {
         </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Form className="d-flex mt-4 mt-lg-0 ms-lg-5 ps-lg-4 me-2 w-100">
-            <FloatingLabel
-              controlId="floatingInput"
-              label={inputPlaceholder.map((placeholder) => placeholder)}
-              className="text-white p-0 m-0 w-75 responsive-label"
-              style={{ fontSize: "20px" }}
-            >
-              <Form.Control
-                style={{
-                  borderRadius: "20px",
-                }}
-                type="search"
-                placeholder="search"
-                className="bg-transparent text-white ms-0 p-0"
-              />
-            </FloatingLabel>
-          </Form>
+          <div className="ms-lg-5 ps-lg-5 w-100">
+            <Form className="d-flex mt-4 mt-lg-0 ms-lg-5 ps-lg-5 me-2 w-100">
+              <FloatingLabel
+                controlId="floatingInput"
+                label={inputPlaceholder.map((placeholder) => placeholder)}
+                className="text-white p-0 m-0 w-75 responsive-label"
+                style={{ fontSize: "20px" }}
+              >
+                <Form.Control
+                  style={{
+                    borderRadius: "20px",
+                  }}
+                  type="search"
+                  placeholder="search"
+                  className="bg-transparent text-white ms-0 p-0"
+                />
+              </FloatingLabel>
+            </Form>
+          </div>
           <Nav className="ms-auto my-2 my-lg-0">
             <NavLink
               onClick={() => {
