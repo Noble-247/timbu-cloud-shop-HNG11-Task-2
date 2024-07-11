@@ -21,6 +21,7 @@ function Product({ id, name, image, price, stockInfo }) {
         <img
           src={image}
           className="img-fluid"
+          style={{ borderRadius: "20px" }}
         />
       </div>
       <div style={{ lineHeight: "1" }}>

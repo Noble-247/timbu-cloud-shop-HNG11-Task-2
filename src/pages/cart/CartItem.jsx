@@ -18,6 +18,7 @@ function CartItem({ id, name, image, price }) {
           <img
             src={image}
             className="img-fluid"
+            style={{ borderRadius: "20px" }}
           />
         </div>
         <div className="w-75">
